@@ -41,7 +41,23 @@ We need to build out a function that matches the signature
 We have a python builtin that selects the highest number from a list, the **max**
 function.
 
+```python 
+assert max([1,2,-10]) == 2
+assert max([1,2,-10], key=abs) == -10
+```
 
+## Testing 
 
+Testing is the process of building test cases that allow us to understand if our
+software is meeting expectations.
+
+```python
+def test_poker():
+    straight_flush = "6C 7C 8C 9C TC".split()
+    four_of_kind = "9D 9H 9S 9C 7D".split()
+    full_house = "TD TC TH 7C 7D".split()
+    
+    assert poker(straight_flush, four_of_kind, full_house) == straight_flush
+```
 
 
