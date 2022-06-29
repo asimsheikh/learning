@@ -1,5 +1,7 @@
 # Lesson 1
 
+## Outlining the problem 
+
 The goal is to build a poker playing program.
 
 We need to have an idea about the problem domain, the main concepts. In the case
@@ -15,5 +17,31 @@ of a poker playing game, the major concepts are
 	- flush (all the same suit)
 
 These concepts need to be modelled and represented in the computer.
+
+## Representing hands 
+
+We need a method to represent the hands, examples could include 
+
+```python
+[ 'JS', 'JD', '2S', '2C', '7H']
+[ (11, 'S'), (11, 'D'), (2, 'S') ]
+"JS JD 2S 2C 2D"
+```
+
+## Poker function
+
+We need to build out a function that matches the signature 
+
+```python
+ def poker(hands) -> hand:
+	"Return the best hand: poker([hand1, hand2 ... handn]) -> hand"
+	return ??
+```
+
+We have a python builtin that selects the highest number from a list, the **max**
+function.
+
+
+
 
 
