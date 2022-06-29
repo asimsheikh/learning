@@ -9,6 +9,10 @@ def test_poker():
     assert poker([four_of_kind, full_house]) == four_of_kind
     assert poker([full_house, full_house]) == full_house
 
+    # Testing extreme values
+    assert poker([full_house]) == full_house
+    assert poker([straight_flush] * 100) == straight_flush
+
 def test_max_function():
     assert max([3,4,5,-9]) == 5
     assert max([3,4,5,-9], key=abs) == -9
