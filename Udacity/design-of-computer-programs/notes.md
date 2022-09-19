@@ -60,4 +60,19 @@ def test_poker():
     assert poker(straight_flush, four_of_kind, full_house) == straight_flush
 ```
 
+## Developing a rank function
+
+We need a hand rank function that allows us to give a ranking to different
+hands, the initial approach would to rank the hands 0 .. 8 to represent the 9
+cases of hands.
+
+The issue we run into is what is we have 2 pair, for example [10,10..] versus
+[9,9 ...] even though they are the same two of a kind, we need to distinguish
+between the cases, ie [10,10..] > [9, 9...]
+
+A way to represent this would be using tuples 
+
+```python
+(7, 9, 5) # represents four of a kind of 9, with 5 remaning card value
+```
 
