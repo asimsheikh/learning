@@ -59,3 +59,5 @@ SHOW COLUMNS from cats;
 
 DESC cats;
 ```
+
+
